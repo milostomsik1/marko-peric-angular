@@ -33,7 +33,15 @@ import { FooterComponent } from './footer/footer.component';
       path: 'services' , component: ServicesComponent
       },
       {
-      path: '**' , component: HeroComponent
+      path: 'portfolio' , component: PortfolioComponent
+      },
+      {
+      path: 'contact' , component: ContactComponent
+      },
+      {
+        path: '**',
+        redirectTo: '',
+        pathMatch: 'full'
       }
     ])
   ],
