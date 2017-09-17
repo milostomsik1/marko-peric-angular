@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./triangles.component.sass']
 })
 
-export class TrianglesComponent {}
+export class TrianglesComponent {
+
+}
