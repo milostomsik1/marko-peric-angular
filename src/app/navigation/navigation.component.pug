@@ -1,0 +1,4 @@
+ul.navigation
+  li.navigation__item(*ngFor='let link of navigationLinks', [routerLink]='link.route', routerLinkActive='currentLink')
+    i([class]='link.icon')
+    span {{ link.name }}

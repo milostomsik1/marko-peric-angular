@@ -1,7 +1,10 @@
+//--- Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
+//--- Components
 import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
@@ -9,6 +12,8 @@ import { ServicesComponent } from './services/services.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { TrianglesComponent } from './triangles/triangles.component';
 
 @NgModule({
   declarations: [
@@ -18,13 +23,16 @@ import { FooterComponent } from './footer/footer.component';
     ServicesComponent,
     PortfolioComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    NavigationComponent,
+    TrianglesComponent
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot([
       {
-      path: '' , component: HeroComponent
+      path: 'home' , component: HeroComponent
       },
       {
       path: 'about' , component: AboutComponent
@@ -40,7 +48,7 @@ import { FooterComponent } from './footer/footer.component';
       },
       {
         path: '**',
-        redirectTo: '',
+        redirectTo: 'home',
         pathMatch: 'full'
       }
     ])
