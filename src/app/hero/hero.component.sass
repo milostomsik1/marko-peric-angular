@@ -9,3 +9,27 @@
 //--------------------
 //  Hero
 //--------------------
+.hero
+  display: flex
+
+  &-wrapper
+    background-image: url(../../assets/img/hero.png)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+
+  &__headline
+    align-self: center
+
+    font-size: $headline-size
+    font-weight: $headline-weight
+    line-height: $headline-line-height
+
+    &--primary
+      color: $primary
+
+    &--bold
+      font-weight: 500
+
+    &--italic
+      font-style: italic

@@ -9,3 +9,99 @@
 //--------------------
 //  Contact
 //--------------------
+.contact
+  clear: both
+  
+  &__form
+    display: flex
+
+    flex-wrap: wrap
+    justify-content: space-between
+  
+  &__name, &__email, &__subject, &__message
+    padding: 1rem 2rem
+
+    color: $text
+    font-size: $input-size
+    font-weight: $input-weight
+
+    background-color: inherit
+
+    border: 0.5px solid $text
+
+    transition: all 0.4s
+
+    &::placeholder
+      color: $muted
+
+    &:focus
+      border-color: $primary
+
+      transform: scale(0.95)
+      transition: all 0.4s
+      
+      outline-color: $primary
+
+  &__name, &__email, &__subject
+    flex: 1
+
+    @include breakpoint(to-tablet)
+      margin: 0 0 $margin 0
+      
+  &__name
+    @include breakpoint(tablet)
+      margin: 0 $margin/2 $margin 0
+
+    @include breakpoint(from-laptop)
+      margin: 0 $margin/2 $margin 0
+
+  &__email
+    @include breakpoint(tablet)
+      margin: 0 0 $margin $margin/2
+
+    @include breakpoint(from-laptop)
+      margin: 0 $margin/2 $margin $margin/2
+
+  &__subject
+    @include breakpoint(tablet)
+      margin: 0 0 $margin 0
+
+    @include breakpoint(from-laptop)
+      margin: 0 0 $margin $margin/2
+
+  &__message
+    width: 100%
+    min-height: 18rem
+    margin: 0 0 $margin 0
+
+    resize: none
+
+  &__submit
+    padding: 1rem 2rem
+    margin: 0 auto
+
+    color: lighten($primary, 25%)
+    text-transform: uppercase
+
+    background-color: $primary
+
+    border: none
+
+    cursor: pointer
+    transition: all 0.4s
+
+    &:hover
+      padding-left: 3rem
+      padding-right: 3rem
+
+      color: $text
+
+      background-color: darken($primary, 10%)
+
+      transition: all 0.4s
+
+    &:focus
+      outline-color: $primary
+
+    &::before
+      background-color: $primary

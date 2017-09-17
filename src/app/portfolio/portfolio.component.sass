@@ -9,3 +9,41 @@
 //--------------------
 //  Portfolio
 //--------------------
+.portfolio
+  clear: both
+
+  &__item
+    width: calc(100% / 3 - #{$margin} * 1.2)
+    margin: $margin * 0.6
+
+    float: left
+
+    cursor: pointer
+
+    filter: saturate(0.3)
+    transition: all 0.4s
+
+    overflow: hidden
+
+    @include breakpoint(to-laptop)
+      width: calc(100% / 2 - #{$margin} * 1.2)
+
+    @include breakpoint(phone)
+      width: calc(100% - #{$margin} * 1.2)
+      
+    &:hover 
+      transform: scale(0.9)
+      filter: saturate(1.5)
+      transition: all 0.4s
+
+    &-container
+      margin: -$margin * 0.6
+
+      &::after
+        content: ""
+        display: table
+        clear: both
+
+    img
+      width: 100%;
+      height: auto

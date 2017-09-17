@@ -1,1 +1,107 @@
+//--------------------
+//  URL Imports
+//--------------------
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600&amp;subset=latin-ext')
+
+
+//--------------------
+//  Style Imports
+//--------------------
+@import './assets/sass/colors'
+@import './assets/sass/typography'
+@import './assets/sass/spacing'
+@import './assets/sass/mixins'
+
+
+//--------------------
+//  Shared Styles
+//--------------------
+.hero, .about, .services, .portfolio, .contact, .footer
+  padding-top: $block-padding
+  padding-bottom: $block-padding
+  margin-left: auto
+  margin-right: auto
+  width: 114rem
+  height: 100vh
+  
+  @include breakpoint(laptop)
+    width: 97rem
+
+  @include breakpoint(tablet)
+    width: 72rem
+
+  @include breakpoint(phablet)
+    width: 52rem
+
+  @include breakpoint(phone)
+    width: 100%
+    padding-left: 2rem
+    padding-right: 2rem
+
+  &__title
+    color: $primary
+    font-size: $title-size
+    font-weight: $title-weight
+    text-transform: uppercase
+
+  &__subtitle
+    margin-bottom: $margin * 2
+    
+    color: $secondary
+    font-size: $subtitle-size
+    font-weight: $subtitle-weight
+
+
+//--------------------
+//  General Styles
+//--------------------
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  
+  font-family: $font-family
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+::selection
+  color: #fff
+  background-color: lighten($primary, 15%)
+
+html
+  color: $text
+  font-size: 10px
+
+  background-color: $bg
+
+  cursor: default
+  user-select: none
+
+a
+  color: $primary
+
+  &:focus
+    outline-color: $primary
+
+.shutter
+  position: relative
+  z-index: 0
+  background-color: $primary
+  transition: all 0.4s
+
+  &:before
+    content: ""
+    position: absolute
+    z-index: -1
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-color: $primary
+    transform: scaleY(1)
+    transform-origin: 50%
+    transition: transform 0.4s ease-out
+
+  &:hover:before, &:focus:before, &:active:before
+    transform: scaleY(0)
