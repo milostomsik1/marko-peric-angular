@@ -7,31 +7,22 @@
 @import '../../assets/sass/mixins'
 
 .triangle
-  width: 20rem
-  height: 20rem
-
   position: absolute
-  top: 50%
-  left: 50%
   z-index: $z-triangles
 
   background: linear-gradient(180deg, #3a6d9a 0%, #1a8a95 100%)
-  // opacity: 0.5
 
-  //--- full triangle
-  // clip-path: polygon(50% 0%, 0% 100%, 100% 100%)
+  animation-name: rotate
+  animation-iteration-count: infinite
+  animation-direction: alternate
 
-  //--- border clip
+.triangle--border
   clip-path: polygon(50% 0, 0 100%, 2% 100%, 50% 3.5%, 97% 98%, 3% 98%, 0 100%, 100% 100%)
 
-  animation: rotate 10s infinite
+.triangle--full
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%)
 
 @keyframes rotate
-  0%
-    filter: hue-rotate(0deg)
-    transform: rotateZ(-15deg)
-  50%
-    transform: rotateZ(30deg)
   100%
-    filter: hue-rotate(360deg)
-    transform: rotateZ(-15deg)
+    filter: hue-rotate(random(360) +deg)
+    transform: rotateZ(random(360) +deg) translate(random(30) - 15  +rem, random(30) - 15 +rem)

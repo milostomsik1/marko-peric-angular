@@ -33,5 +33,5 @@ export class NavigationComponent {
       icon: 'fa fa-lg fa-address-book-o',
       name: 'Contact'
     }
-  ]
+  ];
 }

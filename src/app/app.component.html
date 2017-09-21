@@ -1,4 +1,6 @@
 
 <app-navigation></app-navigation>
 <router-outlet></router-outlet>
-<app-triangles></app-triangles>
+<div class="triangles">
+  <app-triangles *ngFor="let triangle of [1,2,3,4,5,6]"></app-triangles>
+</div>
