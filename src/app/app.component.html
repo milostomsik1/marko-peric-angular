@@ -1,6 +1,8 @@
 
 <app-navigation></app-navigation>
-<router-outlet></router-outlet>
+<div class="router-container" [@routerAnimation]="getRoute()">
+  <router-outlet></router-outlet>
+</div>
 <div class="triangles">
   <app-triangles *ngFor="let triangle of [1,2,3,4,5,6]"></app-triangles>
 </div>

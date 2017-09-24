@@ -1,4 +1,5 @@
 app-navigation
-router-outlet
+.router-container([@routerAnimation]="getRoute()")
+  router-outlet
 .triangles
   app-triangles(*ngFor="let triangle of [1,2,3,4,5,6]")

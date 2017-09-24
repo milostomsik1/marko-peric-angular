@@ -1,10 +1,11 @@
-//--- Modules
+// --- Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-//--- Components
+// --- Components
 import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
 import { AboutComponent } from './about/about.component';
@@ -29,6 +30,7 @@ import { TrianglesComponent } from './triangles/triangles.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     RouterModule.forRoot([
       {
